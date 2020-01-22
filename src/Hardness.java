@@ -1,9 +1,9 @@
 public class Hardness {
 
-    public static void main (String args[]){
+    public static void main (String args[]) {
 
         int volume=50; //объём пробы
-        double concentration=0.00971; // концентрация трилона Б
+        double concentration = 0.00971; // концентрация трилона Б
         float volimeHARD1 = (float) 7.9;
         float volimeHARD2 = (float) 8.0;
         float volumecalcium1 = (float) 3.5;
@@ -15,13 +15,11 @@ public class Hardness {
         float normCalc;
         if (calciumRES <= 2) {
             normCalc = (float) (calciumRES*0.22);
-        } else {
-            if (calciumRES <= 10){
+        } else if (calciumRES <= 10) {
                 normCalc = (float) (calciumRES*0.14);
             } else {
-                normCalc = (float) (calciumRES*0.08);
+            normCalc = (float) (calciumRES*0.08);
             }
-        }
         float normMagnesium = (float) (magnesiumRES*0.02);
         float deltaHard = Math.abs(volimeHARD1-volimeHARD2);
         float deltaCalc = Math.abs(volumecalcium1 - volumecalcium2);
@@ -30,15 +28,15 @@ public class Hardness {
         boolean truecalc;
         boolean trueHard;
         boolean truMagnesium;
-        if (deltaHard <= normHARD){
+        if (deltaHard <= normHARD) {
             trueHard = true;
         } else trueHard = false;
 
-        if (deltaCalc <= normCalc){
+        if (deltaCalc <= normCalc) {
             truecalc = true;
         } else truecalc = false;
 
-        if (deltaMagnesium <= normMagnesium){
+        if (deltaMagnesium <= normMagnesium) {
             truMagnesium = true;
         } else truMagnesium = false;
 

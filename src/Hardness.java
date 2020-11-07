@@ -16,7 +16,7 @@ public class Hardness {
         if (calciumRES <= 2) {
             normCalc = (float) (calciumRES*0.22);
         } else if (calciumRES <= 10) {
-                normCalc = (float) (calciumRES*0.14);
+            normCalc = (float) (calciumRES*0.14);
             } else {
             normCalc = (float) (calciumRES*0.08);
             }
